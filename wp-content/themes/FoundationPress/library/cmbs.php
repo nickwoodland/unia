@@ -16,6 +16,8 @@ function page_gallery_metaboxes() {
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
+        'show_on'       => array( 'key' => 'exclude-front-page'),
+        //'show_on_cb' => 'uni_metabox_exclude_front_page'
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         // 'closed'     => true, // Keep the metabox closed by default
     ) );

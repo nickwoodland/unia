@@ -54,4 +54,6 @@ require_once( 'library/responsive-images.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
 /** Custom metaboxes */
+require_once( 'library/cmbs-show-on-filters.php' );
 require_once( 'library/cmbs.php' );
+require_once( 'library/cmbs-fp.php' );
