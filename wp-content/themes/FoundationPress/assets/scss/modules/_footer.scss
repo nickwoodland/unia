@@ -2,17 +2,18 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
-	border-top: 1px solid #ccc;
 	margin-top: rem-calc(60);
 
 	#footer {
 		@include grid-row();
-		padding: rem-calc(30) 0;
+		padding: rem-calc($rem-base);
+        background-color: $dark-gray;
+        text-align: center;
 
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
+        .footer__contact{
+            span:not(:last-child){
+                margin-right: rem-calc($rem-base);
+            }
+        }
 	}
 }
