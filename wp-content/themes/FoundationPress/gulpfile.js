@@ -30,7 +30,7 @@ var PATHS = {
   sass: [
     'assets/components/foundation-sites/scss',
     'assets/components/motion-ui/src',
-    'assets/components/fontawesome/scss',
+    'assets/components/fontawesome/scss'
   ],
   javascript: [
     'assets/components/what-input/what-input.js',
@@ -61,8 +61,12 @@ var PATHS = {
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
 
+
+    //slick
+    'assets/components/slick.js/slick/slick.js',
+
     // Include your own custom scripts (located in the custom folder)
-    'assets/javascript/custom/*.js',
+    'assets/javascript/custom/slick.js',
   ],
   phpcs: [
     '**/*.php',

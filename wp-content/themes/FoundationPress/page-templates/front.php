@@ -4,7 +4,7 @@ Template Name: Front Page
 */
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+<?php include(locate_template('template-parts/hero.php')); ?>
 
 <div id="page-full-width" role="main">
 

@@ -15,6 +15,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// Enqueue the main Stylesheet.
 	wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/stylesheets/foundation.css', array(), '2.6.1', 'all' );
 
+    wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/components/slick.js/slick/slick.css', array(), '1.6.0', 'all' );
+    wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/assets/components/slick.js/slick/slick-theme.css', array(), '1.6.0', 'all' );
+
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
 
