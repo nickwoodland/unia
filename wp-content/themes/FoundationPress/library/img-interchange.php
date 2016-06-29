@@ -8,7 +8,7 @@ function fp_interchange_string($img_id){
     $feature_img_id = $img_id;
 
     //relate WP img sizes to foundation breakpoints
-    $size_array = array('fp-small' => 'small','fp-medium' => 'medium','full' => 'large');
+    $size_array = array('small' => 'small','medium' => 'medium','large' => 'large');
 
     $return_string = '';
     $flag = true;

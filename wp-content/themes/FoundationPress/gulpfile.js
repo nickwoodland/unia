@@ -66,7 +66,7 @@ var PATHS = {
     'assets/components/slick.js/slick/slick.js',
 
     // Include your own custom scripts (located in the custom folder)
-    'assets/javascript/custom/slick.js',
+    'assets/javascript/custom/*.js'
   ],
   phpcs: [
     '**/*.php',

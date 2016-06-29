@@ -1,0 +1,14 @@
+.site-title{
+    width:221px;
+    height:103px;
+    background-image: url('../images/site-logo.png');
+    display:block;
+    margin:0px auto;
+
+    .site-title--primary{
+        visibility: hidden;
+        height:0px;
+        width:0px;
+        overflow:hidden;
+    }
+}

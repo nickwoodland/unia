@@ -1,9 +1,33 @@
 .hero-slider__wrapper{
+    display:none;
     margin-right:-10px;
 }
 
 .hero-slider{
     .slick-list{
         overflow:visible;
+    }
+}
+
+.hero-subtitle__wrapper{
+    width:100%;
+    text-align: center;
+    background-color: $dark-gray;
+    padding:$rem-base;
+}
+
+.hero-subtitle{
+    font-size:rem-calc(22);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Palatino Linotype", Palatino, "Times New Roman", serif;
+    color: $white;
+    margin-bottom:0px;
+}
+
+@include breakpoint('large') {
+    .hero-slider__wrapper{
+        display:block;
+        margin-right:-10px;
     }
 }

@@ -13,3 +13,31 @@
   }
 
 }
+.page-container{
+    padding: rem-calc($rem-base);
+
+    @include breakpoint(large) {
+        padding:0px;
+        padding-left: rem-calc($rem-base*2);
+        margin-top:rem-calc($rem-base*3);
+    }
+
+    .entry-title{
+        font-size: rem-calc(18px);
+        font-weight: 600;
+        line-height:1;
+        margin-bottom:rem-calc($rem-base);
+    }
+}
+
+.page-sidebar{
+    .sidebar{
+        background-color: $medium-gray;
+    }
+}
+
+.page-gallery{
+    .page-gallery__image{
+        margin-bottom:rem-calc($rem-base*2);
+    }
+}

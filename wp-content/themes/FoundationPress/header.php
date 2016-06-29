@@ -40,41 +40,41 @@
 			</div>
 		</div>
 
-        <div class="row collapse landmark--half">
-            <div class="columns large-8 large-offset-2 text-center">
-				<div class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<h1 class="site-title--primary">Unia Opticians</h1>
-					</a>
-				</div>
+        <div class="row collapse landmark" data-equalizer data-equalize-on="xlarge">
+            <div class="columns xlarge-8 xlarge-offset-2 large-12 text-center" data-equalizer-watch>
+                <a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    				<h1 class="site-title--primary">Unia Opticians</h1>
+                </a>
             </div>
             <?php if($twitter || $fb): ?>
-                <div class="columns large-2 header__social">
+                <div class="columns xlarge-2 large-12 header__social" data-equalizer-watch>
                     <?php if($twitter): ?>
-                        <a href="<?php echo $twitter; ?>"><i class="fa fa-3x fa-twitter"></i></a>
+                        <a href="<?php echo $twitter; ?>" class="header__social-twitter"><i class="fa fa-3x fa-twitter"></i></a>
                     <?php endif; ?>
                     <?php if($fb): ?>
-                        <a href="<?php echo $fb; ?>"><i class="fa fa-3x fa-facebook"></i></a>
+                        <a href="<?php echo $fb; ?>" class="header__social-fb"><i class="fa fa-3x fa-facebook"></i></a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
         </div>
 
         <div class="row collapse">
-            <?php if($email): ?>
-                <div class="columns large-2 text-left header__email">
-                    <a href="mailto:<?php echo $email; ?>">EMAIL US</a>
-                </div>
-            <?php endif; ?>
 
-            <div class="columns large-8 text-center <?php echo ($phone ? '' : 'large-offset-3' ); ?>">
+
+            <div class="columns main-navigation__wrapper xlarge-8 large-12 xlarge-push-2 text-center">
     		    <nav id="site-navigation" class="main-navigation" role="navigation">
     			    <?php foundationpress_primary_nav(); ?>
     		    </nav>
             </div>
 
+            <?php if($email): ?>
+                <div class="columns xlarge-2 xlarge-pull-8 small-6 text-left header__email">
+                    <a href="mailto:<?php echo $email; ?>">EMAIL US</a>
+                </div>
+            <?php endif; ?>
+
             <?php if($phone): ?>
-                <div class="columns large-2 text-right header__phone">
+                <div class="columns xlarge-2 small-6 text-right header__phone">
                     <a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a>
                 </div>
             <?php endif; ?>

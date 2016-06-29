@@ -1,0 +1,22 @@
+.fp-grid{
+    max-width:782px;
+    margin:0px auto;
+    margin-top:rem-calc($rem-base*3);
+
+    .fp-cta__thumb{
+        width:100%;
+    }
+
+    .fp-cta__title-wrapper{
+        width:100%;
+        background-color: $medium-gray;
+        text-align: center;
+        padding: $rem-base/2;
+    }
+
+    .fp-cta__title{
+        text-transform: uppercase;
+        font-size: $rem-base;
+        margin-bottom:0px;
+    }
+}

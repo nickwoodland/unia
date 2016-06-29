@@ -1,3 +1,40 @@
+#masthead{
+    margin-bottom:rem-calc($rem-base/2);
+}
+
 .header__phone, .header__email{
     font-size: 18px;
+}
+
+.header__social{
+    text-align:center;
+    padding-top:rem-calc($rem-base);
+    padding-bottom: rem-calc($rem-base);
+
+    .header__social-twitter, .header__social-fb{
+        margin: 0px $rem-base;
+    }
+
+}
+
+@include breakpoint(xlarge) {
+    .header__social{
+        position:relative;
+        padding:0px;
+
+        .header__social-twitter, .header__social-fb{
+            position:absolute;
+            margin:0px;
+        }
+
+        .header__social-twitter{
+            bottom:0px;
+            right:0px;
+        }
+
+        .header__social-fb{
+            bottom:0px;
+            right:$rem-base*4;
+        }
+    }
 }

@@ -13,11 +13,10 @@
                 <?php endforeach; ?>
             </div>
         </div>
+        <?php if($hero_subtitle): ?>
+            <div class="hero-subtitle__wrapper">
+                <h3 class="hero-subtitle"><?php echo $hero_subtitle; ?></h3>
+            </div>
+        <?php endif; ?>
     </div>
 <?php endif;?>
-
-<?php if($hero_subtitle): ?>
-    <div>
-        <h3><?php echo $hero_subtitle; ?></h3>
-    </div>
-<?php endif; ?>

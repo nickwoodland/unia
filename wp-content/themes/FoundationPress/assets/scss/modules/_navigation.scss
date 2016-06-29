@@ -79,3 +79,15 @@
 .nav-next {
 	float:right;
 }
+
+.main-navigation__wrapper{
+  @include show-for(medium);
+}
+
+#menu-mobile-nav{
+    background-color: $black;
+
+    li a{
+        padding: $rem-base;
+    }
+}
