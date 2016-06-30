@@ -1,0 +1,20 @@
+.contact-page{
+    margin-top: rem-calc($rem-base*3);
+    margin-left: rem-calc($rem-base);
+    margin-right:rem-calc($rem-base);
+}
+
+@include breakpoint('xlarge'){
+
+    .contact-page{
+        margin-left: 0px;
+        margin-right:0px;
+    }
+    .contact-page__form{
+        padding-right:$rem-base;
+    }
+
+    .contact-page__content{
+        padding-left:$rem-base;
+    }
+}

@@ -83,6 +83,7 @@
 @import "modules/editor-style";
 @import "modules/hero";
 @import "modules/cta-grid";
+@import "modules/gforms";
 
 
 // Components
@@ -96,8 +97,10 @@
 
 // Templates
 @import "templates/front";
+@import "templates/contact";
 @import "templates/kitchen-sink";
 @import "templates/page-default";
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";
+@import "templates/blog";

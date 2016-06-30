@@ -31,9 +31,13 @@
 
           nav li a{
               font-size: rem-calc(18);
-              margin-bottom:rem-calc(12);
+              padding:rem-calc(8);
               text-transform: capitalize;
               font-weight:400;
+          }
+
+          nav li.active > a{
+              background-color: $dark-gray;
           }
   }
 

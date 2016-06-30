@@ -30,6 +30,12 @@
 
         a{
             font-size: rem-calc(18px);
+            display:inline-block;
+        }
+
+        &:not(:last-child):after{
+            content:"-";
+            display:inline-block;
         }
     }
 }

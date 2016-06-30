@@ -7,6 +7,18 @@
     .slick-list{
         overflow:visible;
     }
+
+    .slick-arrow{
+        z-index: 9999;
+    }
+
+    .slick-prev{
+        left: 10px;
+    }
+
+    .slick-next{
+        right: 25px;
+    }
 }
 
 .hero-subtitle__wrapper{

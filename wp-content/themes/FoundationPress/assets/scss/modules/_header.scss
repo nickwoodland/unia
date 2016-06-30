@@ -1,5 +1,12 @@
 #masthead{
     margin-bottom:rem-calc($rem-base/2);
+    margin-left: rem-calc($rem-base);
+    margin-right: rem-calc($rem-base);
+
+    @include breakpoint('large'){
+        margin-left: 0px;
+        margin-right:0px;
+    }
 }
 
 .header__phone, .header__email{

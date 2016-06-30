@@ -1,0 +1,11 @@
+@include breakpoint('xlarge'){
+    .blog-container{
+        margin-left:-$rem-base;
+        margin-right:-$rem-base;
+    }
+
+    .post__inner{
+        margin-left:-$rem-base;
+        margin-right:-$rem-base;
+    }
+}
