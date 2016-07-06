@@ -18,23 +18,33 @@
     <span class="footer__title">Unia Opticians</span>
     <span class="footer__address">
         <?php if($add1 && "" != $add1): ?>
-            <?php echo $add1; ?>
+            <span>
+                <?php echo $add1; ?>
+            </span>
         <?php endif; ?>
 
         <?php if($add2 && "" != $add2): ?>
-            <?php echo $add2; ?>
+            <span>
+                <?php echo $add2; ?>
+            </span>
         <?php endif; ?>
 
         <?php if($locality && "" != $locality): ?>
-            <?php echo $locality; ?>
+            <span>
+                <?php echo $locality; ?>
+            </span>
         <?php endif; ?>
 
         <?php if($region && "" != $region): ?>
-            <?php echo $region; ?>
+            <span>
+                <?php echo $region; ?>
+            </span>
         <?php endif; ?>
 
         <?php if($postcode && "" != $postcode): ?>
-            <?php echo $postcode; ?>
+            <span>
+                <?php echo $postcode; ?>
+            </span>
         <?php endif; ?>
     </span>
 
