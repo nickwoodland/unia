@@ -12,6 +12,7 @@
 <?php $email = of_get_option('contact_email'); ?>
 <?php $fb = of_get_option('facebook_page_url'); ?>
 <?php $twitter = of_get_option('twitter_profile_url'); ?>
+<?php $gplus = of_get_option('google_company_page_url'); ?>
 
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -49,10 +50,13 @@
             <?php if($twitter || $fb): ?>
                 <div class="columns xlarge-2 large-12 header__social" data-equalizer-watch>
                     <?php if($twitter): ?>
-                        <a href="<?php echo $twitter; ?>" class="header__social-twitter"><i class="fa fa-3x fa-twitter"></i></a>
+                        <a href="<?php echo $twitter; ?>" class="header__social-twitter"><i class="fa fa-2x fa-twitter"></i></a>
                     <?php endif; ?>
                     <?php if($fb): ?>
-                        <a href="<?php echo $fb; ?>" class="header__social-fb"><i class="fa fa-3x fa-facebook"></i></a>
+                        <a href="<?php echo $fb; ?>" class="header__social-fb"><i class="fa fa-2x fa-facebook"></i></a>
+                    <?php endif; ?>
+                    <?php if($gplus): ?>
+                        <a href="<?php echo $gplus; ?>" class="header__social-gplus"><i class="fa fa-2x fa-google-plus"></i></a>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>

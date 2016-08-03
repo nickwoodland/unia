@@ -29,7 +29,7 @@
         position:relative;
         padding:0px;
 
-        .header__social-twitter, .header__social-fb{
+        .header__social-twitter, .header__social-fb, .header__social-gplus{
             position:absolute;
             margin:0px;
         }
@@ -41,7 +41,12 @@
 
         .header__social-fb{
             bottom:0px;
-            right:$rem-base*4;
+            right:$rem-base*3;
+        }
+
+        .header__social-gplus{
+            bottom:0px;
+            right:$rem-base*5;
         }
     }
 }

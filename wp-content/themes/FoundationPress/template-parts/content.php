@@ -17,11 +17,11 @@
 	</header>
 	<div class="entry-content">
 
-		<?php
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+            <div class="landmark">
+				<?php the_post_thumbnail(); ?>
+            </div>
+		<?php endif; ?>
 
 		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
 	</div>

@@ -579,6 +579,34 @@ final class GF_Entry_List_Table extends WP_List_Table {
 	}
 
 	/**
+	 * Gets the ordering for the entry list table.
+	 *
+	 * Also formats the query string to uppercase. If none is present, sets it to ascending.
+	 *
+	 * @since 2.0.3.6
+	 * @access public
+	 *
+	 * @return string The ordering to be used.
+	 */
+	public function get_order() {
+		return empty( $_GET['order'] ) ? 'ASC' : strtoupper( $_GET['order'] );
+	}
+
+	/**
+	 * Gets the column that list is ordered by.
+	 *
+	 * If none is set, defaults to 0 (the first column)
+	 *
+	 * @since 2.0.3.6
+	 * @access public
+	 *
+	 * @return int The column to be used.
+	 */
+	public function get_orderby() {
+		return empty( $_GET['orderby'] ) ? 0 : $_GET['orderby'];
+	}
+
+	/**
 	 * Performs the search and prepares the entries for display.
 	 */
 	function prepare_items() {
@@ -593,9 +621,9 @@ final class GF_Entry_List_Table extends WP_List_Table {
 
 		$search_criteria = $this->get_search_criteria();
 
-		$sort_direction = empty( $_GET['order'] ) ? 'ASC' : strtoupper( $_GET['order'] );
+		$sort_direction = $this->get_order();
 
-		$sort_field      = empty( $_GET['orderby'] ) ? 0 : $_GET['orderby'];
+		$sort_field = $this->get_orderby();
 
 		$sort_field_meta = RGFormsModel::get_field( $form, $sort_field );
 
@@ -966,7 +994,7 @@ final class GF_Entry_List_Table extends WP_List_Table {
 	}
 
 	/**
-	 * Displays the row action if the column if primary.
+	 * Displays the row action if the column is primary.
 	 *
 	 * @param array $entry
 	 * @param string $column_name
@@ -1092,8 +1120,21 @@ final class GF_Entry_List_Table extends WP_List_Table {
 			?>
 		</div>
 		<?php
+		/**
+		 * Fires at the end of the first entry column
+		 *
+		 * Used to add content to the entry list's first column
+		 *
+		 * @param int    $form_id      The ID of the current form
+		 * @param int    $field_id     The ID of the field
+		 * @param string $value        The value of the field
+		 * @param array  $entry         The Entry object
+		 * @param string $query_string The current page's query string
+		 */
+		do_action( 'gform_entries_first_column', $form_id, $field_id, $value, $entry, $query_string );
+
 		$this->row_index++;
-		return $column_name === $primary ? '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details' ) . '</span></button>' : '';
+		return '<button type="button" class="toggle-row"><span class="screen-reader-text">' . __( 'Show more details' ) . '</span></button>';
 	}
 
 	/**
